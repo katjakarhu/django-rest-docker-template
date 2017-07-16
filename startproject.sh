@@ -5,9 +5,10 @@ if [ $# -eq 0 ]
     exit 1
 fi
 
-# Write project name to Dockerfile
+# Write project name to Dockerfile and docker-command.sh
 name=$1
-sed -i "s/${name}/$name/g" Dockerfile
+sed -i 's/{name}/'$name'/g' Dockerfile
+sed -i 's/{name}/'$name'/g' docker-command.sh
 
 
 # Create the project directory

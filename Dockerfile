@@ -1,6 +1,6 @@
  FROM python:3.5.2
  ENV PYTHONUNBUFFERED 1
- ENV PROJECT ${name}
+ ENV PROJECT {name}
  RUN apt-get update
  RUN apt-get install --quiet --assume-yes postgresql-client
  RUN mkdir /code
