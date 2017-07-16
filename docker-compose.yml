@@ -2,7 +2,8 @@
  services:
 
   web:
-     build: ./
+     build:
+          context: ./
      command: sh docker-command.sh
      volumes:
        - .:/code
@@ -10,7 +11,8 @@
        - 8000:8000
      depends_on:
        - db
-    
+
+
   db:
      image: postgres
      environment:

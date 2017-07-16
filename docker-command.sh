@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # Postgres must be up and accepting command
 # So, let's check for that before doing anything else
 set -e
@@ -18,13 +17,13 @@ done
 
 # Collect static files
 echo "Collect static files"
-#python */manage.py collectstatic --noinput
+#python $project/$project/manage.py collectstatic --noinput
 
 # Apply database migrations
 echo "Apply database migrations"
-python */manage.py makemigrations
-python */manage.py migrate
+python $project/$project/manage.py makemigrations
+python $project/$project/manage.py migrate
 
 # Start server
 echo "Starting server"
-python */manage.py runsslserver 0.0.0.0:8000
+python $project/$project/manage.py runsslserver 0.0.0.0:8000
