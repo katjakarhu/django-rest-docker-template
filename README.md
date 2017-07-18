@@ -1,9 +1,8 @@
-# django-rest-docker-template
+# Template for Django REST Framework projects with PostgreSQL, Docker and django-allauth
 
-Start a new Django REST Framework project by running `startproject.sh`
+Create a new Django REST Framework project by running `startproject.sh`
 
-It creates a new virtualenv for you, installs Django and Django rest framework and freezes requirements.
+It creates a new virtualenv for you, installs and freezes requirements, and configures the project settings and urls.
 
 Project can be then run with `docker-compose up`.
 
-It starts a Postgres database as well.
