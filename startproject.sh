@@ -4,16 +4,25 @@ if [ $# -eq 0 ]
     echo "No arguments supplied"
     exit 1
 fi
-
-# Write project name to Dockerfile and docker-command.sh
+# Set project name
 name=$1
-sed -i -e 's/{name}/'$name'/g' Dockerfile
-sed -i -e 's/{name}/'$name'/g' docker-command.sh
 
-
-# Create the project directory
+# Create and enter the project directory
 mkdir $name
 cd $name
+
+# Write project name to Dockerfile and docker-command.sh
+sed -i -e 's/{name}/'$name'/g' ../settings/Dockerfile
+sed -i -e 's/{name}/'$name'/g' ../settings/docker-command.sh
+
+# Move docker files to the project directory
+mv ../settings/docker-command.sh .
+mv ../settings/docker-compose.yml .
+mv ../settings/.dockerignore .
+mv ../settings/Dockerfile .
+
+# Add gitingore to project
+cp ../.gitignore .
 
 
 # Create a virtualenv to isolate our package dependencies locally

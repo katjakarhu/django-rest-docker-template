@@ -5,6 +5,6 @@
  RUN apt-get install --quiet --assume-yes postgresql-client
  RUN mkdir /code
  WORKDIR /code
- ADD $PROJECT/$PROJECT/requirements.txt /code/
+ ADD $PROJECT/requirements.txt /code/
  RUN pip install -r requirements.txt
  ADD . /code/

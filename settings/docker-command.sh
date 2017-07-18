@@ -19,13 +19,13 @@ done
 
 # Collect static files
 echo "Collect static files"
-#python $project/$project/manage.py collectstatic --noinput
+#python $project/manage.py collectstatic --noinput
 
 # Apply database migrations
 echo "Apply database migrations"
-python $project/$project/manage.py makemigrations
-python $project/$project/manage.py migrate
+python $project/manage.py makemigrations
+python $project/manage.py migrate
 
 # Start server
 echo "Starting server"
-python $project/$project/manage.py runsslserver 0.0.0.0:8000
+python $project/manage.py runsslserver 0.0.0.0:8000
