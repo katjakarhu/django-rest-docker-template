@@ -1,0 +1,1 @@
+DATABASES(\s)*=(\s)*{(\s)*'default': {(\s)*'ENGINE': 'django\.db\.backends\.sqlite3',(\s)*'NAME': os\.path\.join\(BASE_DIR, 'db\.sqlite3'\),(\s)*}(\s)*}
