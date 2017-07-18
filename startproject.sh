@@ -16,10 +16,10 @@ sed -i -e 's/{name}/'$name'/g' ../settings/Dockerfile
 sed -i -e 's/{name}/'$name'/g' ../settings/docker-command.sh
 
 # Move docker files to the project directory
-mv ../settings/docker-command.sh .
-mv ../settings/docker-compose.yml .
-mv ../settings/.dockerignore .
-mv ../settings/Dockerfile .
+cp ../settings/docker-command.sh .
+cp ../settings/docker-compose.yml .
+cp ../settings/.dockerignore .
+cp ../settings/Dockerfile .
 
 # Add gitingore to project
 cp ../.gitignore .
