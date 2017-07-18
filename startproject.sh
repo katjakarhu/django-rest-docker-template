@@ -40,7 +40,7 @@ pip install gunicorn
 django-admin.py startproject $name
 
 # Freeze requirements
-pip freeze > requirements.txt
+pip freeze > $name/requirements.txt
 
 # Set database to Postgres in project settings
 sqlite=`cat ../settings/db_sqlite.txt`

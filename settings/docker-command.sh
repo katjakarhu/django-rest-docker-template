@@ -1,6 +1,6 @@
 #!/bin/bash
 # Project name
-project = {name}
+project={name}
 
 # Postgres must be up and accepting command
 # So, let's check for that before doing anything else
