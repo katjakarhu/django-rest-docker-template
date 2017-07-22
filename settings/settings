@@ -1,0 +1,23 @@
+\n\nAUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`\n
+    'django.contrib.auth.backends.ModelBackend',\n\n
+
+    # `allauth` specific authentication methods, such as login by e-mail\n
+    'allauth.account.auth_backends.AuthenticationBackend',\n
+)\n\nREST_FRAMEWORK = {\n
+    'DEFAULT_RENDERER_CLASSES': (\n
+        'rest_framework.renderers.JSONRenderer',\n
+    ),\n\n
+
+    'DEFAULT_PARSER_CLASSES': (\n
+        'rest_framework.parsers.JSONParser',\n
+    ),\n\n
+
+    'DEFAULT_THROTTLE_CLASSES': (\n
+        'rest_framework.throttling.UserRateThrottle'\n
+    ),\n\n
+
+    'DEFAULT_THROTTLE_RATES': {\n
+        'user': '10000/day'\n
+    }\n
+}\n

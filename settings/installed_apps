@@ -1,0 +1,25 @@
+    'django.contrib.staticfiles',
+
+    #drf\n
+    'rest_framework',\n
+
+    #allauth\n
+    'django.contrib.sites',\n
+    'allauth',\n
+    'allauth.account',\n
+    'allauth.socialaccount',\n
+    'allauth.socialaccount.providers.facebook',\n
+    'allauth.socialaccount.providers.github',\n
+    'allauth.socialaccount.providers.gitlab',\n
+    'allauth.socialaccount.providers.google',\n
+    'allauth.socialaccount.providers.linkedin',\n
+    'allauth.socialaccount.providers.linkedin_oauth2',\n
+    'allauth.socialaccount.providers.openid',\n
+    'allauth.socialaccount.providers.pinterest',\n
+    'allauth.socialaccount.providers.reddit',\n
+    'allauth.socialaccount.providers.slack',\n
+    'allauth.socialaccount.providers.tumblr',\n
+    'allauth.socialaccount.providers.twitter',\n
+    'allauth.socialaccount.providers.weibo',\n
+    'allauth.socialaccount.providers.weixin',\n
+    'allauth.socialaccount.providers.windowslive',\n

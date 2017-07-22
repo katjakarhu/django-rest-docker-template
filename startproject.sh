@@ -42,10 +42,21 @@ django-admin.py startproject $name
 # Freeze requirements
 pip freeze > $name/requirements.txt
 
-# Set database to Postgres in project settings
+# Set database to Postgres in settings.py
 sqlite=`cat ../settings/db_sqlite.txt`
 postgres=`cat ../settings/db_postgres.txt`
+perl -0777 -pi -e "s/$sqlite/$postgres/g" $name/$name/settings.py
 
-perl -0777 -pe "s/$sqlite/$postgres/g" $name/$name/settings.py
+# Add items to installed apps in settings.py
+apps=`cat ../settings/installed_apps`
+marker='(.)django\.contrib\.staticfiles(.)\,'
+perl -pi -e "s/$marker/$apps/g" $name/$name/settings.py
 
+# Add items to urls.py
+urls=`cat ../settings/urls`
+perl -pi -e "s!]!$urls!g" $name/$name/urls.py
+
+# Add settings to the end of settings.py
+settings=`cat ../settings/settings`
+echo $settings >> $name/$name/settings.py
 
