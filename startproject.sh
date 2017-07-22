@@ -54,9 +54,13 @@ apps=`cat ../settings/installed_apps`
 marker='(.)django\.contrib\.staticfiles(.)\,'
 perl -pi -e "s/$marker/$apps/g" $name/$name/settings.py
 
-# Add items to urls.py
+# Add items to urls.py and fix import
 urls=`cat ../settings/urls`
 perl -pi -e "s!]!$urls!g" $name/$name/urls.py
+
+import_orig='from django.conf.urls import url'
+import_new='from django.conf.urls import url, include'
+perl -pi -e "s/$import_orig/$import_new/g" $name/$name/urls.py
 
 # Add settings to the end of settings.py
 settings=`cat ../settings/settings`
