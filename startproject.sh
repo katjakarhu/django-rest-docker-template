@@ -12,8 +12,8 @@ mkdir $name
 cd $name
 
 # Write project name to Dockerfile and docker-command.sh
-sed -i -e 's/{name}/'$name'/g' ../settings/Dockerfile
-sed -i -e 's/{name}/'$name'/g' ../settings/docker-command.sh
+perl -pi -e 's/{name}/'$name'/g' ../settings/Dockerfile
+perl -pi -e 's/{name}/'$name'/g' ../settings/docker-command.sh
 
 # Move docker files to the project directory
 cp ../settings/docker-command.sh .
@@ -35,6 +35,8 @@ pip install djangorestframework
 pip install psycopg2
 pip install django-sslserver
 pip install gunicorn
+pip install python-openid
+pip install django-allauth
 
 # Set up a new project with a single application
 django-admin.py startproject $name

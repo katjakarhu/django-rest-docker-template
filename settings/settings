@@ -21,3 +21,6 @@
         'user': '10000/day'\n
     }\n
 }\n
+\n
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))\n
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')\n
