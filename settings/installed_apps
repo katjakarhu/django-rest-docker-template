@@ -1,4 +1,6 @@
-    'django.contrib.staticfiles',
+'django.contrib.staticfiles',
+    # ssl server
+    'sslserver',
 
     #drf\n
     'rest_framework',\n
