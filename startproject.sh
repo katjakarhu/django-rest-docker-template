@@ -30,19 +30,18 @@ virtualenv env
 source env/bin/activate
 
 # Install Django and Django REST framework into the virtualenv
-pip install django
-pip install djangorestframework
-pip install psycopg2
-pip install django-sslserver
-pip install gunicorn
-pip install python-openid
-pip install django-allauth
+pip3 install django
+pip3 install djangorestframework
+pip3 install psycopg2
+pip3 install django-sslserver
+pip3 install gunicorn
+pip3 install django-allauth
 
 # Set up a new project with a single application
 django-admin.py startproject $name
 
 # Freeze requirements
-pip freeze > $name/requirements.txt
+pip3 freeze > $name/requirements.txt
 
 # Set database to Postgres in settings.py
 sqlite=`cat ../settings/db_sqlite.txt`
