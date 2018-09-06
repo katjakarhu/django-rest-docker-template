@@ -1,3 +1,3 @@
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),\n
-    url(r'^accounts/', include('allauth.urls')),\n
+    path(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),\n
+    path(r'^accounts/', include('allauth.urls')),\n
 ]\n
