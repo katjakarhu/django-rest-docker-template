@@ -24,6 +24,8 @@ cp ../settings/Dockerfile .
 # Add gitingore to project
 cp ../.gitignore .
 
+# Install virtualenv
+pip3 install virtualenv
 
 # Create a virtualenv to isolate our package dependencies locally
 virtualenv env
